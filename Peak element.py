@@ -4,6 +4,8 @@
 
 ##Note: Consider the element before the first element and the element after the last element to be negative infinity.
 
+
+## TIME O(N) SPACE O(1)
 class Solution:   
     def peakElement(self, arr):
         n=len(arr)
@@ -20,3 +22,19 @@ class Solution:
                 return i
         return -1
 
+
+
+## USING BINARY SEARCH
+## TIME O(log n) SPACE O(1)
+class Solution:   
+    def peakElement(self, arr):
+        left =0
+        right=len(arr)-1
+        while left<right:
+            mid=(left+right)//2
+            if arr[mid]>arr[mid+1]:
+                right=mid
+            else:
+                left=mid+1
+        return left
+                
