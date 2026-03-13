@@ -2,6 +2,7 @@
 
 ##Note: Stock must be bought before being sold.
 
+class Solution:
     def maxProfit(self, prices):
         if len(prices)==1 or len(prices)==0:
             return 0
@@ -14,5 +15,6 @@
                     profit=profit_curr
                 if prices[i]<min_amt:
                     min_amt=prices[i]
-            return profit 
+            return profit
             
+## Time Complexity O(N) Space Complexity O(1)
