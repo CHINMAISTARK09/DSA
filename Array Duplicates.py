@@ -9,7 +9,6 @@ class Solution:
             index=abs(arr[i])-1
             if arr[index] <0:
                 result.append(abs(arr[i]))
-            else:
-                
+            else:       
                 arr[index]=-arr[index]
         return result
